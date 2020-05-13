@@ -16,13 +16,13 @@ public class ChangeScenes : MonoBehaviour
 
     public void LoadNewScene(string sceneName)
     {
-        SceneManager.LoadScene(sceneName); 
+        SceneManager.LoadScene(sceneName);
     }
 
     public void LoadNewScene1()
     {
-        SceneManager.LoadScene("scene1");
+        SceneManager.LoadScene("Snaps Scene");
     }
-
-
 }
+
+

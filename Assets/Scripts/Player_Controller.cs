@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class Player_Controller : MonoBehaviour {
 
@@ -21,8 +23,12 @@ public class Player_Controller : MonoBehaviour {
         if (other.gameObject.CompareTag("Pick Up"))
         {
             other.gameObject.SetActive(false);
-            score = score + 1;
-            SetScoreText ();
+            score += 1;
+            SetScoreText();
+            if (score >= 40)
+            {
+                SceneManager.LoadScene(5);
+            }
         }
     }
     
@@ -30,4 +36,5 @@ public class Player_Controller : MonoBehaviour {
     {
         scoreText.text = "Score: " + score.ToString();
     }
+
 }
